@@ -1,0 +1,472 @@
+/* ===================================
+   ANIMATIONS & KEYFRAMES
+   Modern, Smooth, Professional
+   =================================== */
+
+/* ============ KEYFRAMES ============ */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(237, 63, 39, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(237, 63, 39, 0.6);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ============ SCROLL REVEAL ANIMATIONS ============ */
+
+[data-scroll-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-scroll-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Animation */
+[data-scroll-reveal].revealed:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+[data-scroll-reveal].revealed:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+[data-scroll-reveal].revealed:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+[data-scroll-reveal].revealed:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+[data-scroll-reveal].revealed:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+/* ============ HOVER TILT EFFECT ============ */
+
+[data-tilt] {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* ============ PAGE TRANSITIONS ============ */
+
+.page-transition {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ============ BUTTON ANIMATIONS ============ */
+
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* ============ LOADING ANIMATIONS ============ */
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 25%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.1) 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(237, 63, 39, 0.2);
+    border-top-color: var(--accent-1);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ============ TEXT ANIMATIONS ============ */
+
+.text-gradient-animate {
+    background: linear-gradient(
+        90deg,
+        var(--primary-color),
+        var(--accent-1),
+        var(--accent-2),
+        var(--primary-color)
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient 3s ease infinite;
+}
+
+/* ============ COUNTER ANIMATION ============ */
+
+.counter {
+    transition: all 0.5s ease;
+}
+
+/* ============ FORM ANIMATIONS ============ */
+
+.form-group {
+    position: relative;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label,
+.form-group select:focus ~ label,
+.form-group select:not([value=""]) ~ label {
+    transform: translateY(-24px) scale(0.85);
+    color: var(--accent-1);
+}
+
+.form-group input:focus ~ .form-line,
+.form-group textarea:focus ~ .form-line,
+.form-group select:focus ~ .form-line {
+    transform: scaleX(1);
+}
+
+/* ============ MODAL ANIMATIONS ============ */
+
+.modal-overlay {
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    animation: zoomIn 0.3s ease;
+}
+
+/* ============ TOAST ANIMATIONS ============ */
+
+.toast {
+    animation: slideInRight 0.3s ease;
+}
+
+.toast.removing {
+    animation: slideInRight 0.3s ease reverse;
+}
+
+/* ============ PARALLAX EFFECT ============ */
+
+.parallax {
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+/* ============ WAVE ANIMATION ============ */
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+.wave {
+    animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+/* ============ TYPEWRITER EFFECT ============ */
+
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--accent-1);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* ============ GLITCH EFFECT ============ */
+
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--accent-1);
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--accent-2);
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(39px, 9999px, 8px, 0);
+    }
+    20% {
+        clip: rect(95px, 9999px, 72px, 0);
+    }
+    40% {
+        clip: rect(16px, 9999px, 86px, 0);
+    }
+    60% {
+        clip: rect(42px, 9999px, 64px, 0);
+    }
+    80% {
+        clip: rect(71px, 9999px, 28px, 0);
+    }
+    100% {
+        clip: rect(55px, 9999px, 11px, 0);
+    }
+}
+
+/* ============ PERFORMANCE OPTIMIZATIONS ============ */
+
+/* Use GPU acceleration for smoother animations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Muthumanickam Digital Services. Let's discuss your project and build something amazing together.">
+    <meta name="keywords" content="contact, hire freelancer, web developer, digital services">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <title>Contact - Muthumanickam Digital Services</title>
+</head>
+<body>
+    
+    <!-- Cursor Effect -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Muthumanickam<span class="logo-dot">.</span></span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="contact-hero-content" data-scroll-reveal>
+                <h1>Let's Create Something <span class="highlight">Amazing</span></h1>
+                <p>Have a project in mind? I'd love to hear about it. Fill out the form below and I'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-scroll-reveal>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="form-line"></span>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <span class="form-line"></span>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="website-design">Website Design</option>
+                                    <option value="landing-page">Landing Page Development</option>
+                                    <option value="seo">SEO & Performance</option>
+                                    <option value="ecommerce">E-Commerce Setup</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="service">Service Needed</label>
+                                <span class="form-line"></span>
+                                <i class="fas fa-chevron-down select-icon"></i>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="budget" name="budget" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="500-1000">$500 - $1,000</option>
+                                    <option value="1000-3000">$1,000 - $3,000</option>
+                                    <option value="3000-5000">$3,000 - $5,000</option>
+                                    <option value="5000+">$5,000+</option>
+                                </select>
+                                <label for="budget">Budget Range</label>
+                                <span class="form-line"></span>
+                                <i class="fas fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Project Details</label>
+                            <span class="form-line"></span>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-glow btn-large btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                        <button class="btn btn-secondary" id="sendAnother">Send Another Message</button>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info" data-scroll-reveal>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:muthumanickamnagarajan15@gmail.com">muthumanickamnagarajan15@gmail.com</a>
+                        <p>Send me an email anytime!</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <a href="tel:+91 6381028789">+91 6381028789</a>
+                        <p>Mon-Fri, 9AM-6PM PST</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Chennai, TamilNadu<br>India</p>
+                    </div>
+                    
+                    <div class="info-card social-card">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/muthu-manickam-a021ab388/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/MuthuManickam-N15" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="availability-card">
+                        <div class="availability-status">
+                            <span class="status-dot"></span>
+                            <span>Currently Available</span>
+                        </div>
+                        <p>Open for new projects and collaborations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Muthumanickam<span class="highlight">.</span></h3>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MuthumanickamDigital Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

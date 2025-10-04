@@ -1,0 +1,510 @@
+/* ===================================
+   RESPONSIVE STYLES
+   Mobile-First Approach
+   =================================== */
+
+/* ============ LARGE DESKTOP (1400px+) ============ */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* ============ DESKTOP (1200px - 1399px) ============ */
+@media (max-width: 1399px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .hero-title {
+        font-size: 64px;
+    }
+    
+    .section-title {
+        font-size: 48px;
+    }
+}
+
+/* ============ LAPTOP (992px - 1199px) ============ */
+@media (max-width: 1199px) {
+    :root {
+        --spacing-xl: 5rem;
+        --spacing-lg: 3rem;
+    }
+    
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 56px;
+    }
+    
+    .section-title {
+        font-size: 42px;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .stat-number {
+        font-size: 40px;
+    }
+}
+
+/* ============ TABLET (768px - 991px) ============ */
+@media (max-width: 991px) {
+    :root {
+        --spacing-xl: 4rem;
+        --spacing-lg: 2.5rem;
+        --spacing-md: 1.5rem;
+        --navbar-height: 70px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: var(--navbar-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--navbar-height));
+        background: var(--surface);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+        box-shadow: var(--shadow-lg);
+        transition: left var(--transition-base);
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-actions .btn-primary {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 32px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    .floating-card {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+    
+    .floating-card i {
+        font-size: 16px;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        min-width: calc(50% - var(--spacing-sm));
+    }
+    
+    /* CTA Section */
+    .cta-title {
+        font-size: 42px;
+    }
+    
+    .cta-subtitle {
+        font-size: 18px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    /* Contact Page */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-info {
+        order: -1;
+    }
+}
+
+/* ============ MOBILE LANDSCAPE (576px - 767px) ============ */
+@media (max-width: 767px) {
+    :root {
+        --spacing-xl: 3rem;
+        --spacing-lg: 2rem;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: calc(var(--navbar-height) + 2rem) 0 var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .stat-item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        min-width: 100%;
+    }
+    
+    .slider-controls {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Footer */
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Contact Form */
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* ============ MOBILE PORTRAIT (< 575px) ============ */
+@media (max-width: 575px) {
+    :root {
+        --spacing-xl: 2.5rem;
+        --spacing-lg: 1.5rem;
+        --spacing-md: 1rem;
+        --navbar-height: 60px;
+    }
+    
+    /* Navigation */
+    .logo-text {
+        font-size: 22px;
+    }
+    
+    .nav-actions {
+        gap: 8px;
+    }
+    
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 15px;
+    }
+    
+    .hero-label {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+    }
+    
+    .floating-card.card-1,
+    .floating-card.card-2 {
+        display: none;
+    }
+    
+    .floating-card.card-3 {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .btn-large {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    .section-label {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+    
+    /* Services */
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 28px;
+    }
+    
+    .service-title {
+        font-size: 20px;
+    }
+    
+    .service-description {
+        font-size: 14px;
+    }
+    
+    /* Testimonials */
+    .testimonial-text {
+        font-size: 14px;
+    }
+    
+    /* CTA */
+    .cta-title {
+        font-size: 28px;
+    }
+    
+    .cta-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Footer */
+    .footer-brand h3 {
+        font-size: 24px;
+    }
+    
+    .footer {
+        padding: var(--spacing-lg) 0 var(--spacing-sm);
+    }
+    
+    /* Back to Top */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+    }
+    
+    /* Contact Hero */
+    .contact-hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .contact-hero-content p {
+        font-size: 15px;
+    }
+    
+    /* Contact Info */
+    .info-card {
+        padding: var(--spacing-md);
+    }
+    
+    .info-card h3 {
+        font-size: 18px;
+    }
+}
+
+/* ============ SMALL MOBILE (< 400px) ============ */
+@media (max-width: 399px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .cta-title {
+        font-size: 24px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* ============ LANDSCAPE ORIENTATION ============ */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: calc(var(--navbar-height) + 1rem) 0 var(--spacing-md);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .hero-stats {
+        margin-top: var(--spacing-md);
+    }
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+    .navbar,
+    .hamburger,
+    .theme-toggle,
+    .scroll-indicator,
+    .back-to-top,
+    .cta-section,
+    .floating-card {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero,
+    .services,
+    .testimonials {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============ ACCESSIBILITY ============ */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --background: #0f0f0f;
+        --surface: #1a1a1a;
+        --text-primary: #f5f5f5;
+        --text-secondary: #d1d5db;
+    }
+}
