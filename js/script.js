@@ -1,5 +1,5 @@
 /* ================================
-   ARJUN DIGITAL SERVICES
+   Muthumanickam DIGITAL SERVICES
    Optimized JavaScript
    ================================ */
 
@@ -292,7 +292,7 @@ DOM.contactForm?.addEventListener('submit', async (e) => {
         console.error('❌ Error:', error);
         
         // Show error alert
-        alert('Oops! Something went wrong. Please try again or email me directly at hello@arjundigital.com');
+        alert('Oops! Something went wrong. Please try again or email me directly at muthumanickamnagarjan15@gmail.com');
         
     } finally {
         // Reset button state
@@ -338,6 +338,6 @@ if ('IntersectionObserver' in window) {
 }
 
 // ========== INITIALIZATION ==========
-console.log('🚀 Arjun Digital Services - Loaded Successfully!');
+console.log('🚀 Muthumanickam Digital Services - Loaded Successfully!');
 console.log('📧 Contact form ready with Web3Forms');
 console.log('💡 Remember to replace YOUR_ACCESS_KEY_HERE in index.html');
